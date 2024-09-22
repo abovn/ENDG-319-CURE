@@ -8,6 +8,8 @@
 # Yahya Elmadhoun
 # Youssef Abdalla
 
+import pandas as pd
+
 def main():
     main()
 
