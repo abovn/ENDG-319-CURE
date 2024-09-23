@@ -11,7 +11,5 @@
 import pandas as pd
 
 
-sdfsdafsd 
-
 if __name__ == "__main__":
     main()
