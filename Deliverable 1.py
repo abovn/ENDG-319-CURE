@@ -9,9 +9,6 @@
 # Youssef Abdalla
 
 import pandas as pd
-sadfsadf
-
-
 
 if __name__ == "__main__":
     main()
