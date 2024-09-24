@@ -10,5 +10,6 @@
 
 import pandas as pd
 
-if __name__ == "__main__":
-    main()
+
+column_names = ['Gasoline(MPG)', 'Diesel(MPG)']
+data = np.genfromtxt(r'C:\Users\haide\OneDrive\Desktop\University\Fall 2024\ENDG-319-CURE\ENDG 319 Deliverable 1 Data - Task 1.csv', delimiter = ',', skip_header = True, dtype = str)
