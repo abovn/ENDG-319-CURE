@@ -9,7 +9,9 @@
 # Youssef Abdalla
 
 import pandas as pd
+from pandas import DataFrame
+import numpy as np
 
-
-column_names = ['Gasoline(MPG)', 'Diesel(MPG)']
-data = np.genfromtxt(r'C:\Users\haide\OneDrive\Desktop\University\Fall 2024\ENDG-319-CURE\ENDG 319 Deliverable 1 Data - Task 1.csv', delimiter = ',', skip_header = True, dtype = str)
+table1 = DataFrame()
+table1['Gasoline(MPG)'] = [22,25,28,30,27,26,24,29,23,31,22,25,28,32,26]
+table1['Diesel(MPG)'] = [35,38,40,37,36,39,34,38,33,37,35,39,40,36,33]
