@@ -11,6 +11,7 @@
 import pandas as pd
 from pandas import DataFrame
 import numpy as np
+import math
 
 table1 = DataFrame()
 table1['Gasoline(MPG)'] = [22,25,28,30,27,26,24,29,23,31,22,25,28,32,26]
