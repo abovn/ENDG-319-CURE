@@ -12,9 +12,8 @@ data = load_breast_cancer()
 a = pd.DataFrame(data.data, columns=data.feature_names)
 a['typeofcancer'] = data.target
 
-# Display the first few rows of dataframe 'a'
-print("Dataframe 'a':")
-print(a.head())
+# T1 part a
+print(a.shape)
 
 # Task 1(b): Slice the dataframe to only include specific features
 df = a[['mean radius', 'mean perimeter', 'mean area', 'typeofcancer']]
