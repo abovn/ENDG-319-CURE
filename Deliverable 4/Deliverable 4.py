@@ -117,7 +117,11 @@ print(f"Model accuracy in the test set = {test_acc:.2f}")
 # Task 4: Predict for a randomly generated new instance
 # Generate a new random instance within the range of the dataset
 new_instance_random = np.random.uniform(X.min(axis=0), X.max(axis=0), size=(1, X.shape[1]))
+
+# Rounds the new instance values to 1 decimal place to match the decimal
+new_instance_random_rounded = np.round(new_instance_random, 1)
+
 # Predict the class for the new instance
 predicted_class_random = final_model.predict(scaler_minmax.transform(new_instance_random))
-print(f"Randomly Generated New Instance: {new_instance_random}")
+print(f"Randomly Generated New Instance: {new_instance_random_rounded}")
 print(f"Predicted class for the new instance: {iris.target_names[predicted_class_random[0]]}")
