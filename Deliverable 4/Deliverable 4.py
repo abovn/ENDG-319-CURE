@@ -77,7 +77,7 @@ plt.show()
 
 # Final Model and Confusion Matrix with Randomized Test Set
 best_k = k_values[np.argmax(test_accuracies_minmax)]
-_, _, final_model, X_test_scaled, y_test_random = knn_model(best_k, scaler_minmax, X_train, X_test, y_train, y_test)
+train_acc, test_acc, final_model, X_test_scaled, y_test_random = knn_model(best_k, scaler_minmax, X_train, X_test, y_train, y_test)
 
 y_pred_random = final_model.predict(X_test_scaled)
 conf_matrix_random = confusion_matrix(y_test_random, y_pred_random)
@@ -87,6 +87,13 @@ disp = ConfusionMatrixDisplay(confusion_matrix=conf_matrix_random, display_label
 disp.plot(cmap=plt.cm.Blues)
 plt.title("Confusion Matrix")
 plt.show()
+
+# Print Final Model Parameters, Scaler, and Accuracy
+print(f"Final model parameters and scaler and accuracy:")
+print(f"k = {best_k}")
+print(f"Scaler used for attribute preprocessing: {scaler_minmax}")
+print(f"Model accuracy in the training set = {train_acc:.2f}")
+print(f"Model accuracy in the test set = {test_acc:.2f}")
 
 # Task 4: Predict for a randomly generated new instance
 new_instance_random = np.random.uniform(X.min(axis=0), X.max(axis=0), size=(1, X.shape[1]))
